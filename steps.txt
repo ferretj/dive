@@ -1,0 +1,49 @@
+what dive is for :
+- download dataset
+(Kaggle, maybe others)
+- exploring a dataset
+(per feature statistics, feature types, target/feature correlations)
+- cleaning and preprocessing data
+(handling missing values, removing invariant features, normalization)
+- splitting data
+(to train/valid, to train/valid/test)
+- fitting models
+(hyperoptimization)
+
+GOALS:
+- steps can be called independently
+- better logging system, clear
+- combines ML and DL if GPU is present
+- does not make strong assumptions and finds viable combinations of hyperparams through hyperoptimization
+
+METHODS:
+(- download dataset -> download.py)
+- load data -> load.py
+- explore -> explore.py
+- preprocess -> handle_nan.py, prune_features.py, normalize.py, process.py
+- split -> split.py
+- fit -> learn.py
+- apply -> apply.py
+
+SCRIPT DETAILS:
+download.py : donwloads dataset from Kaggle
+load.py : from CSV to DataFrame
+explore.py : from DataFrame to fine textual description of data
+process.py : from DataFrame to numpy ndarray
+split.py : from numpy ndarray to split numpy ndarrays
+fit.py : from split numpy ndarrays to trained models
+apply.py : from trained model(s) to numpy ndarray(s) 
+
+INSPIRATION:
+- MLBox
+- TPOT
+- mlcrate (Mikal, guy from Kaggle)
+- autosklearn
+
+GOING FURTHER:
+- tSNE
+- AutoAugment
+- mixup
+- SNNs
+- representation learning
+- Hyperband
